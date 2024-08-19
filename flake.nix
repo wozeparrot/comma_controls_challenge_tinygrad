@@ -29,10 +29,19 @@
                 (tinygrad.override {
                   rocmSupport = true;
                 })
+                numpy
+                onnx
+                onnxruntime
+                matplotlib
+                seaborn
+                tqdm
+                wandb
               ];
-            python = pkgs.python312;
+            python = pkgs.python311;
           in [
             (python.withPackages python-packages)
+            pkgs.clang
+            pkgs.inotify-tools
           ];
         };
       }

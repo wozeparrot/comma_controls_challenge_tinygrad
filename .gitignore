@@ -1,2 +1,6 @@
 .direnv/
 result
+
+__pycache__
+ckpts/
+wandb/
